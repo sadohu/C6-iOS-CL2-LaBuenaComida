@@ -110,8 +110,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tvPlatos" destination="LNs-Ur-oRo" id="d9K-z4-PrE"/>
-                        <segue destination="qKh-Tm-sML" kind="show" id="gWo-mO-WDf"/>
-                        <segue destination="QpD-yi-YeT" kind="show" id="wOa-iR-5xh"/>
+                        <segue destination="qKh-Tm-sML" kind="show" identifier="nuevoPlato" id="gWo-mO-WDf"/>
+                        <segue destination="QpD-yi-YeT" kind="show" identifier="detallePlato" id="wOa-iR-5xh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

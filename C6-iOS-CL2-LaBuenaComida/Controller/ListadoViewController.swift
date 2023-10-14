@@ -18,17 +18,26 @@ class ListadoViewController: UIViewController, UITableViewDataSource, UITableVie
         platosList = PlatoController().listPlatos();
         tvPlatos.dataSource = self;
         tvPlatos.delegate = self;
-        
+        tvPlatos.rowHeight = 90;
+        /* Primer método de recarga de datos */
         refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged);
         tvPlatos.refreshControl = refreshControl;
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        /* Segundo método para recarga de datos */
+        platosList = PlatoController().listPlatos();
+        self.tvPlatos.reloadData();
+    }
+    
     @IBAction func btnNuevo(_ sender: UIButton) {
-        
+        /* Tercer método para recarga de datos */
+        performSegue(withIdentifier: "nuevoPlato", sender: self);
     }
 
     @IBAction func btnRefresh(_ sender: UIButton) {
-        
+        platosList = PlatoController().listPlatos();
+        self.tvPlatos.reloadData();
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
