@@ -18,6 +18,8 @@
 		41BC54AF2ADA74AE0091028B /* DetallePlatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54AE2ADA74AE0091028B /* DetallePlatoViewController.swift */; };
 		41BC54B12ADA75A40091028B /* ItemPlatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54B02ADA75A40091028B /* ItemPlatoTableViewCell.swift */; };
 		41BC54B32ADA774B0091028B /* Plato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54B22ADA774B0091028B /* Plato.swift */; };
+		41BC54B62ADA78660091028B /* PlatosDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54B42ADA78660091028B /* PlatosDataModel.xcdatamodeld */; };
+		41BC54B82ADA7C9A0091028B /* PlatoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54B72ADA7C9A0091028B /* PlatoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		41BC54AE2ADA74AE0091028B /* DetallePlatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePlatoViewController.swift; sourceTree = "<group>"; };
 		41BC54B02ADA75A40091028B /* ItemPlatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPlatoTableViewCell.swift; sourceTree = "<group>"; };
 		41BC54B22ADA774B0091028B /* Plato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plato.swift; sourceTree = "<group>"; };
+		41BC54B52ADA78660091028B /* PlatosDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlatosDataModel.xcdatamodel; sourceTree = "<group>"; };
+		41BC54B72ADA7C9A0091028B /* PlatoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				41BC549C2ADA61650091028B /* Assets.xcassets */,
 				41BC549E2ADA61650091028B /* LaunchScreen.storyboard */,
 				41BC54A12ADA61650091028B /* Info.plist */,
+				41BC54B42ADA78660091028B /* PlatosDataModel.xcdatamodeld */,
 			);
 			path = "C6-iOS-CL2-LaBuenaComida";
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 				41BC54AA2ADA74420091028B /* ListadoViewController.swift */,
 				41BC54AC2ADA747F0091028B /* NuevoPlatoViewController.swift */,
 				41BC54AE2ADA74AE0091028B /* DetallePlatoViewController.swift */,
+				41BC54B72ADA7C9A0091028B /* PlatoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,10 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BC54B82ADA7C9A0091028B /* PlatoController.swift in Sources */,
 				41BC54982ADA61640091028B /* ViewController.swift in Sources */,
 				41BC54B12ADA75A40091028B /* ItemPlatoTableViewCell.swift in Sources */,
 				41BC54AB2ADA74420091028B /* ListadoViewController.swift in Sources */,
 				41BC54AF2ADA74AE0091028B /* DetallePlatoViewController.swift in Sources */,
+				41BC54B62ADA78660091028B /* PlatosDataModel.xcdatamodeld in Sources */,
 				41BC54942ADA61640091028B /* AppDelegate.swift in Sources */,
 				41BC54AD2ADA747F0091028B /* NuevoPlatoViewController.swift in Sources */,
 				41BC54B32ADA774B0091028B /* Plato.swift in Sources */,
@@ -400,6 +408,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41BC54B42ADA78660091028B /* PlatosDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41BC54B52ADA78660091028B /* PlatosDataModel.xcdatamodel */,
+			);
+			currentVersion = 41BC54B52ADA78660091028B /* PlatosDataModel.xcdatamodel */;
+			path = PlatosDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 41BC54882ADA61640091028B /* Project object */;
 }
