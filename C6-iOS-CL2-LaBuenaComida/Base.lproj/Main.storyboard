@@ -249,6 +249,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtCodigoListener:" destination="qKh-Tm-sML" eventType="editingChanged" id="9sD-b9-M78"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRECIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-j8-h7s">
                                 <rect key="frame" x="16" y="323" width="63" height="21"/>
@@ -311,12 +314,20 @@
                                     <action selector="btnGrabar:" destination="qKh-Tm-sML" eventType="touchUpInside" id="Fag-BG-Bnt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ERROR: CODIGO EXISTENTE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab3-EO-78t">
+                                <rect key="frame" x="144" y="193" width="233" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p1D-Dm-Dnv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="eWM-1O-vK8"/>
                     <connections>
+                        <outlet property="lblError" destination="ab3-EO-78t" id="I0T-OL-A8G"/>
                         <outlet property="txtChef" destination="OOa-Pl-7LU" id="SMe-vu-7mF"/>
                         <outlet property="txtCodigo" destination="yle-ov-vQp" id="opj-37-E8W"/>
                         <outlet property="txtDescripcion" destination="dNI-bz-Xr9" id="PBO-XF-brd"/>
@@ -354,6 +365,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
