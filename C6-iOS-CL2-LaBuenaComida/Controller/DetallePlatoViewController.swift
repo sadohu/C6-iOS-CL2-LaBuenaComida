@@ -13,9 +13,15 @@ class DetallePlatoViewController: UIViewController {
     @IBOutlet weak var lblPrecio: UILabel!
     @IBOutlet weak var lblStock: UILabel!
     @IBOutlet weak var lblChef: UILabel!
+    var bean : PlatoEntity!
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        lblCodigo.text = "#" + String(bean.codigo);
+        lblDescripcion.text = bean.descripcion;
+        lblPrecio.text = "S/ " + String(bean.precio);
+        lblStock.text = String(bean.stock) + " unidad(es)."
+        lblChef.text = bean.chef;
     }
 
 }

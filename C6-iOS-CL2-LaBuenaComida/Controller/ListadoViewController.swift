@@ -10,7 +10,7 @@ import UIKit
 class ListadoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tvPlatos: UITableView!
     var platosList : [PlatoEntity] = [];
-    var intexPlato = -1;
+    var indexPlato = -1;
     let refreshControl = UIRefreshControl();
     
     override func viewDidLoad() {
@@ -51,6 +51,18 @@ class ListadoViewController: UIViewController, UITableViewDataSource, UITableVie
         view.lblDescripcion.text = descripcion;
         view.lblPrecio.text = "S/ " + precio;
         return view;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexPlato = indexPath.row;
+        performSegue(withIdentifier: "detallePlato", sender: self);
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "detallePlato"){
+            let view = segue.destination as! DetallePlatoViewController;
+            view.bean = platosList[indexPlato];
+        }
     }
     
     @objc func updateData() {
