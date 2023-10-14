@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Listado View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="C6_iOS_CL2_LaBuenaComida" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListadoViewController" customModule="C6_iOS_CL2_LaBuenaComida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="NUEVO PLATO"/>
+                                <connections>
+                                    <action selector="btnNuevo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUi-wi-nVJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LISTADO DE PLATOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-gm-W9D">
                                 <rect key="frame" x="16" y="162" width="289" height="24"/>
@@ -43,7 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="92" id="h1R-XT-adl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemPlato" rowHeight="92" id="h1R-XT-adl" customClass="ItemPlatoTableViewCell" customModule="C6_iOS_CL2_LaBuenaComida" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h1R-XT-adl" id="sPO-JS-DBN">
@@ -80,6 +83,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDescripcion" destination="TEs-iq-bPp" id="H4J-8H-yBk"/>
+                                            <outlet property="lblPrecio" destination="mLL-fR-mOI" id="KcO-Wd-P18"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -88,6 +95,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="btnRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYZ-8W-ANx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -99,6 +109,7 @@
                         </connections>
                     </navigationItem>
                     <connections>
+                        <outlet property="tvPlatos" destination="LNs-Ur-oRo" id="d9K-z4-PrE"/>
                         <segue destination="qKh-Tm-sML" kind="show" id="gWo-mO-WDf"/>
                         <segue destination="QpD-yi-YeT" kind="show" id="wOa-iR-5xh"/>
                     </connections>
@@ -107,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalle Plato View Controller-->
         <scene sceneID="FTq-br-cic">
             <objects>
-                <viewController id="QpD-yi-YeT" sceneMemberID="viewController">
+                <viewController id="QpD-yi-YeT" customClass="DetallePlatoViewController" customModule="C6_iOS_CL2_LaBuenaComida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fmJ-hB-No8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,8 +190,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DESCRIPCIÓN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltQ-3e-4UD">
-                                <rect key="frame" x="16" y="399" width="122" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHEF:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltQ-3e-4UD">
+                                <rect key="frame" x="16" y="399" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -198,20 +209,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="vbD-Ob-hav"/>
+                    <connections>
+                        <outlet property="lblChef" destination="O2d-GN-EZR" id="uIX-3j-4Sh"/>
+                        <outlet property="lblCodigo" destination="3IS-Lj-OFh" id="CI2-Z4-J0n"/>
+                        <outlet property="lblDescripcion" destination="xqb-j8-KNp" id="jRd-Ov-4Ld"/>
+                        <outlet property="lblPrecio" destination="BHK-Nw-bfx" id="zxs-ud-bl9"/>
+                        <outlet property="lblStock" destination="mHQ-Gz-kDJ" id="U9Y-0F-7Y8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NX-0Y-nmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="725.35211267605632"/>
         </scene>
-        <!--View Controller-->
+        <!--Nuevo Plato View Controller-->
         <scene sceneID="C24-ss-4sd">
             <objects>
-                <viewController id="qKh-Tm-sML" sceneMemberID="viewController">
+                <viewController id="qKh-Tm-sML" customClass="NuevoPlatoViewController" customModule="C6_iOS_CL2_LaBuenaComida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cQg-9X-PGI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PLATOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-MP-9Vj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NUEVO PLATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-MP-9Vj">
                                 <rect key="frame" x="52" y="103" width="289" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,12 +307,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="GRABAR"/>
+                                <connections>
+                                    <action selector="btnGrabar:" destination="qKh-Tm-sML" eventType="touchUpInside" id="Fag-BG-Bnt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p1D-Dm-Dnv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="eWM-1O-vK8"/>
+                    <connections>
+                        <outlet property="txtChef" destination="OOa-Pl-7LU" id="SMe-vu-7mF"/>
+                        <outlet property="txtCodigo" destination="yle-ov-vQp" id="opj-37-E8W"/>
+                        <outlet property="txtDescripcion" destination="dNI-bz-Xr9" id="PBO-XF-brd"/>
+                        <outlet property="txtPrecio" destination="dZQ-kA-Ot6" id="GtK-pr-JvR"/>
+                        <outlet property="txtStock" destination="zvc-dF-nel" id="cXj-bL-s11"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="028-OU-835" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

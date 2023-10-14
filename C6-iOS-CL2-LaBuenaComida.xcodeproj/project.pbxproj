@@ -13,6 +13,11 @@
 		41BC549B2ADA61640091028B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BC54992ADA61640091028B /* Main.storyboard */; };
 		41BC549D2ADA61650091028B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41BC549C2ADA61650091028B /* Assets.xcassets */; };
 		41BC54A02ADA61650091028B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BC549E2ADA61650091028B /* LaunchScreen.storyboard */; };
+		41BC54AB2ADA74420091028B /* ListadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54AA2ADA74420091028B /* ListadoViewController.swift */; };
+		41BC54AD2ADA747F0091028B /* NuevoPlatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54AC2ADA747F0091028B /* NuevoPlatoViewController.swift */; };
+		41BC54AF2ADA74AE0091028B /* DetallePlatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54AE2ADA74AE0091028B /* DetallePlatoViewController.swift */; };
+		41BC54B12ADA75A40091028B /* ItemPlatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54B02ADA75A40091028B /* ItemPlatoTableViewCell.swift */; };
+		41BC54B32ADA774B0091028B /* Plato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC54B22ADA774B0091028B /* Plato.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		41BC549C2ADA61650091028B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41BC549F2ADA61650091028B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41BC54A12ADA61650091028B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41BC54AA2ADA74420091028B /* ListadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListadoViewController.swift; sourceTree = "<group>"; };
+		41BC54AC2ADA747F0091028B /* NuevoPlatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoPlatoViewController.swift; sourceTree = "<group>"; };
+		41BC54AE2ADA74AE0091028B /* DetallePlatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePlatoViewController.swift; sourceTree = "<group>"; };
+		41BC54B02ADA75A40091028B /* ItemPlatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPlatoTableViewCell.swift; sourceTree = "<group>"; };
+		41BC54B22ADA774B0091028B /* Plato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plato.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		41BC54922ADA61640091028B /* C6-iOS-CL2-LaBuenaComida */ = {
 			isa = PBXGroup;
 			children = (
+				41BC54A92ADA74190091028B /* View */,
+				41BC54A82ADA740A0091028B /* Model */,
+				41BC54A72ADA73F30091028B /* Controller */,
 				41BC54932ADA61640091028B /* AppDelegate.swift */,
 				41BC54952ADA61640091028B /* SceneDelegate.swift */,
 				41BC54972ADA61640091028B /* ViewController.swift */,
@@ -65,6 +78,32 @@
 				41BC54A12ADA61650091028B /* Info.plist */,
 			);
 			path = "C6-iOS-CL2-LaBuenaComida";
+			sourceTree = "<group>";
+		};
+		41BC54A72ADA73F30091028B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				41BC54AA2ADA74420091028B /* ListadoViewController.swift */,
+				41BC54AC2ADA747F0091028B /* NuevoPlatoViewController.swift */,
+				41BC54AE2ADA74AE0091028B /* DetallePlatoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		41BC54A82ADA740A0091028B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41BC54B22ADA774B0091028B /* Plato.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		41BC54A92ADA74190091028B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41BC54B02ADA75A40091028B /* ItemPlatoTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				41BC54982ADA61640091028B /* ViewController.swift in Sources */,
+				41BC54B12ADA75A40091028B /* ItemPlatoTableViewCell.swift in Sources */,
+				41BC54AB2ADA74420091028B /* ListadoViewController.swift in Sources */,
+				41BC54AF2ADA74AE0091028B /* DetallePlatoViewController.swift in Sources */,
 				41BC54942ADA61640091028B /* AppDelegate.swift in Sources */,
+				41BC54AD2ADA747F0091028B /* NuevoPlatoViewController.swift in Sources */,
+				41BC54B32ADA774B0091028B /* Plato.swift in Sources */,
 				41BC54962ADA61640091028B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
